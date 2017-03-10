@@ -92,7 +92,7 @@ namespace SampleProject.Controllers
         [Route("edit")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,ContactId,AddressLineOne,AddressLineTwo,City,State,Zip")] Address address)
+        public async Task<ActionResult> Edit([Bind(Include = "Id,ContactId,AddressLineOne,AddressLineTwo,City,State,Zip,Type")] Address address)
         {
             if (ModelState.IsValid)
             {

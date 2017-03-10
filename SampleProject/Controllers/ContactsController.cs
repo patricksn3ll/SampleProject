@@ -14,6 +14,7 @@ using SampleProject.Models;
 namespace SampleProject.Controllers
 {
     [Authorize]
+    [RoutePrefix("contacts")]
     public class ContactsController : Controller
     {
         private SampleProjectContext _db;

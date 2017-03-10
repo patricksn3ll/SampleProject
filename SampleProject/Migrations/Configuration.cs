@@ -4,6 +4,7 @@ namespace SampleProject.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using Models;
 
     internal sealed class Configuration : DbMigrationsConfiguration<SampleProject.Models.SampleProjectContext>
     {
@@ -16,18 +17,10 @@ namespace SampleProject.Migrations
 
         protected override void Seed(SampleProject.Models.SampleProjectContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            context.Contacts.AddOrUpdate(
+              c => c,
+              new Contact { FirstName = "Patrick", LastName = "Snell", BirthDate = new DateTime(1974, 2, 22), EmailAddress = "sn3ll@hotmail.com" }
+            );
         }
     }
 }

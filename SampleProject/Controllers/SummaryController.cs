@@ -38,7 +38,8 @@ namespace SampleProject.Controllers
 
             model.TotalNumberOfContacts = await _db.Contacts.CountAsync();
             model.TotalNumberOfComputers = await _db.Contacts.SumAsync(u => u.NumberOfComputers);
-            model.Users = await _db.Contacts.ToListAsync();
+            model.UsersWithHomeAddresses = await _db.Contacts.Where(u => u.Address.Where(a => a.Type == "0").FirstOrDefault() != null).CountAsync();
+            model.UsersWithWorkAddresses = await _db.Contacts.Where(u => u.Address.Where(a => a.Type == "1").FirstOrDefault() != null).CountAsync();
             return View(model);
         }
 

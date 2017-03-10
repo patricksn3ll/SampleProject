@@ -13,6 +13,10 @@ namespace SampleProject.Models
         [Display(Name = "Total Contacts")]
         public int TotalNumberOfContacts { get; set; }
 
-        public List<Contact> Users { get; set; }
+        [Display(Name = "Home Addresses")]
+        public int UsersWithHomeAddresses { get; set; }
+
+        [Display(Name = "Work Addresses")]
+        public int UsersWithWorkAddresses { get; set; }
     }
 }

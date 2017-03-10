@@ -10,8 +10,8 @@ namespace SampleProject.Infrastructure
     {
         public static List<SelectListItem> AddressTypes = new List<SelectListItem>()
         {
-            new SelectListItem() { Text="Shipping", Value="0"},
-            new SelectListItem() { Text="Billing", Value="1"}
+            new SelectListItem() { Text="Home", Value="0"},
+            new SelectListItem() { Text="Work", Value="1"}
         };
 
         public static List<SelectListItem> States = new List<SelectListItem>()

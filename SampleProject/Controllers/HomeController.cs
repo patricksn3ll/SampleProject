@@ -7,6 +7,9 @@ namespace SampleProject.Controllers
     {
         [Authorize]
         [Route("")]
+        [Route("~/")]
+        [Route("index")]
+        [Route]
         public ActionResult Index()
         {
             return View();

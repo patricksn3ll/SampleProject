@@ -36,7 +36,7 @@ namespace SampleProject.Controllers
         public async Task<ActionResult> Login([Bind(Include = "EmailAddress,Password")] Authorization model)
         {
             string hashedPassword = Hash.ComputeHash(model.Password, "MD5", Encoding.ASCII.GetBytes(Infrastructure.Constants.PasswordSalt));
-            Contact user = await _db.Contacts.Where(u => u.EmailAddress == model.EmailAddress && u.Password == hashedPassword).FirstOrDefaultAsync();
+            User user = await _db.Users.Where(u => u.EmailAddress == model.EmailAddress && u.Password == hashedPassword).FirstOrDefaultAsync();
 
             if (null == user)
             {

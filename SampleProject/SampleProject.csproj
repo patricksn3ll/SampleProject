@@ -274,6 +274,7 @@
     <Compile Include="Models\Address.cs" />
     <Compile Include="Controllers\AddressesController.cs" />
     <Compile Include="Models\Authorization.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Models\SampleProjectContext.cs" />
     <Compile Include="Models\Search.cs" />
     <Compile Include="Models\Summary.cs" />

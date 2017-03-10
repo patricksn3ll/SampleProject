@@ -1,0 +1,25 @@
+﻿@model SampleProject.Models.Summary
+
+@{
+    ViewBag.Title = "Summary";
+}
+
+<h2>Contact Summary</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalNumberOfContacts)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalNumberOfContacts)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalNumberOfComputers)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalNumberOfComputers)
+        </dd>
+
+    </dl>
+</div>
